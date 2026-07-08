@@ -1,0 +1,271 @@
+:root { /* É o local padrão para declarar variaveis */
+  --green-dark: #1f7a4d; /* Variaveis de Cor */
+  --green-soft: #e8f7ee; /* Variavel de Cor */
+  --text-dark: #13261f; /* Variavel de Cor */
+  --text-muted: #5d6d64; /* Variavel de Cor */
+  --border: #e5efe9; /* Variavel de Cor */
+}
+
+* { /* Seleciona todos os Elementos da Pagina */
+  box-sizing: border-box; /* O navegador diminui automaticamente a área interna para que tudo caiba no espaço disponível */
+}
+
+body {
+  margin: 0; /* Remove a margem padrão do body */
+  font-family: "Roboto", sans-serif; /* Define a família de fontes */
+  background: #ffffff; /* Define a cor de fundo */
+  color: var(--text-dark); /* Define a cor do texto */
+  padding: 32px 48px 48px; /* Adiciona preenchimento ao body */
+}
+
+.site-header {
+  display: flex; /* Torna o site-header um contêiner flexível */
+  justify-content: space-between; /* Alinhas os elementos no centro verticalmente */
+  align-items: center; /* Alinha os elementos no centro horizontalmente */
+  padding: 8px 0 24px; /* Adiciona preenchimento ao cabeçalho */
+  max-width: 1200px; /* Define a largura máxima do cabeçalho */
+  margin: 0 auto; /* Centraliza o cabeçalho na página */
+}
+
+.brand {
+  display: inline-flex; /* Torna o elemento um contêiner flexível */
+  align-items: center; /* Alinha os elementos no centro horizontalmente */
+  gap: 12px; /* Adiciona espaçamento entre os elementos */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: var(--text-dark); /* Define a cor do texto */
+  font-weight: 700; /* Define o peso da fonte */
+  font-size: 1.1rem; /* Define o tamanho da fonte */
+}
+
+.brand-mark {
+  display: grid; /* Torna o elemento um contêiner grid */
+  place-items: center; /* Centraliza os elementos dentro do grid */
+  width: 44px; /* Define a largura do elemento */
+  height: 44px; /* Define a altura do elemento */
+  border-radius: 50%; /* Torna o elemento redondo */
+  background: var(--green-dark); /* Define a cor de fundo */
+  color: #ffffff; /* Define a cor do texto */
+  font-weight: 900; /* Define o peso da fonte */
+  font-size: 1.2rem; /* Define o tamanho da fonte */
+}
+
+.download-btn {
+  display: inline-flex; /* Torna o elemento um contêiner flexível */
+  align-items: center; /* Alinha os elementos no centro horizontalmente */
+  justify-content: center; /* Centraliza os elementos dentro do contêiner */
+  padding: 12px 24px; /* Adiciona preenchimento ao botão */
+  border-radius: 999px; /* Define o raio da borda */
+  background: var(--green-dark); /* Define a cor de fundo */
+  color: #ffffff; /* Define a cor do texto */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-weight: 700; /* Define o peso da fonte */
+  box-shadow: 0 8px 24px rgba(31, 122, 77, 0.2); /* Define a sombra */
+}
+
+.hero {
+  min-height: 90vh; /* Define a altura mínima do hero */
+  display: flex; /* Torna o hero um contêiner flexível */
+  align-items: center; /* Alinha os elementos no centro verticalmente */
+  justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+  gap: 32px; /* Adiciona espaçamento entre os elementos */
+  max-width: 1200px; /* Define a largura máxima do hero */
+  margin: 0 auto; /* Centraliza o hero na página */
+}
+
+.hero-copy,
+.hero-visual,
+.hero-highlights {
+  flex: 1; /* Define o flex do elemento */
+}
+
+.hero-copy {
+  max-width: 360px; /* Define a largura máxima da cópia do hero */
+}
+
+.eyebrow {
+  margin: 0 0 12px; /* Define a margem inferior */
+  color: var(--green-dark); /* Define a cor do texto */
+  font-weight: 700; /* Define o peso da fonte */
+  letter-spacing: 0.08em; /* Define o espaçamento entre letras */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-size: 0.82rem; /* Define o tamanho da fonte */
+}
+
+.hero-copy h1 {
+  margin: 0 0 16px; /* Define a margem inferior */
+  font-size: clamp(2rem, 3.8vw, 3.1rem); /* Define o tamanho da fonte */
+  line-height: 1.1; /* Define a altura da linha */
+  font-weight: 900; /* Define o peso da fonte */
+}
+
+.hero-text {
+  margin: 0; /* Define a margem */
+  color: var(--text-muted); /* Define a cor do texto */
+  font-size: 1rem; /* Define o tamanho da fonte */
+  line-height: 1.7; /* Define a altura da linha */
+}
+
+.hero-visual {
+  display: flex; /* Torna o elemento um contêiner flexível */
+  justify-content: center; /* Centraliza o elemento dentro do contêiner */
+}
+
+.hero-visual img {
+  width: min(100%, 320px); /* Define a largura do elemento */
+  border-radius: 24px; /* Define o raio da borda */
+  box-shadow: 0 24px 60px rgba(19, 38, 31, 0.16); /* Define a sombra */
+}
+
+.hero-highlights {
+  max-width: 240px; /* Define a largura máxima dos destaques */
+}
+
+.hero-highlights ul {
+  list-style: none; /* Remove a marcação da lista */
+  margin: 0; /* Define a margem */
+  padding: 0; /* Define o preenchimento */
+  display: flex; /* Torna o elemento um contêiner flexível */
+  flex-direction: column; /* Define a direção do flex */
+  gap: 14px; /* Define o espaçamento entre os elementos */
+}
+
+.hero-highlights li {
+  display: flex; /* Torna o elemento um contêiner flexível */
+  align-items: center; /* Alinha os elementos no centro verticalmente */
+  gap: 12px; /* Define o espaçamento entre os elementos */
+  padding: 14px 16px; /* Define o preenchimento */
+  border: 1px solid var(--border); /* Define a borda */
+  border-radius: 16px; /* Define o raio da borda */
+  background: var(--green-soft); /* Define a cor de fundo */
+  color: var(--text-dark); /* Define a cor do texto */
+  font-weight: 500; /* Define o peso da fonte */
+}
+
+.features {
+  max-width: 1200px; /* Define a largura máxima da pagina */
+  margin: 0 auto; /* Centraliza as características na página */
+  padding: 24px 0 40px; /* Define o preenchimento */
+  display: flex; /* Torna o elemento um contêiner flexível */
+  flex-direction: column; /* Define a direção do flex */
+  gap: 24px; /* Define o espaçamento entre os elementos */
+}
+
+.feature-item {
+  display: flex; /* Torna o elemento um contêiner flexível */
+  align-items: center; /* Alinha os elementos no centro verticalmente */
+  gap: 24px; /* Define o espaçamento entre os elementos */
+  padding: 24px; /* Define o preenchimento */
+  border: 1px solid var(--border); /* Define a borda */
+  border-radius: 24px; /* Define o raio da borda */
+  background: #ffffff; /* Define a cor de fundo */
+}
+
+.feature-item:nth-child(2n) {
+  background: var(--green-soft); /* Define a cor de fundo */
+}
+
+.feature-item:nth-child(1) {
+  background: #ffe8e8; /* Define a cor de fundo */
+}
+
+.feature-item:nth-child(3) {
+  background: #eaf4ff; /* Define a cor de fundo */
+}
+
+.feature-item img {
+  width: min(100%, 240px); /* Define a largura do elemento */
+  border-radius: 18px; /* Define o raio da borda */
+  box-shadow: 0 16px 40px rgba(19, 38, 31, 0.12); /* Define a sombra */
+}
+
+.feature-text h2 {
+  margin: 0 0 10px; /* Define a margem */
+  font-size: 1.35rem; /* Define o tamanho da fonte */
+}
+
+.feature-text p {
+  margin: 0 0 10px; /* Define a margem */
+  color: var(--text-muted); /* Define a cor do texto */
+  line-height: 1.7; /* Define o espaçamento entre as linhas */
+}
+
+.feature-text p:last-child {
+  margin-bottom: 0; /* Define a margem */
+}
+
+.feature-item.reverse {
+  flex-direction: row-reverse; /* Define a direção do flex */
+}
+
+.cta {
+  max-width: 1200px; /* Define a largura máxima do CTA */
+  margin: 0 auto; /* Centraliza o CTA na página */
+  padding: 28px 0 40px; /* Define o preenchimento */
+  text-align: center; /* Define o alinhamento do texto */
+}
+
+.cta-btn {
+  padding: 16px 32px; /* Define o preenchimento */
+  font-size: 1.05rem; /* Define o tamanho da fonte */
+}
+
+.cta p {
+  margin: 12px 0 0; /* Define a margem */
+  color: var(--text-muted); /* Define a cor do texto */
+}
+
+.site-footer {
+  max-width: 1200px; /* Define a largura máxima do rodapé */
+  margin: 24px auto 0; /* Centraliza o rodapé na página */
+  padding: 24px 24px 32px; /* Define o preenchimento */
+  text-align: center; /* Define o alinhamento do texto */
+  color: #5a6360; /* Define a cor do texto */
+  background: #e9eceb; /* Define a cor de fundo */
+  border-radius: 20px 20px 0 0; /* Define o raio da borda */
+}
+
+.site-footer p {
+  margin: 6px 0; /* Define a margem */
+}
+
+.footer-copy {
+  font-weight: 500; /* Define o peso da fonte */
+}
+
+.footer-meta {
+  margin-top: 10px; /* Define a margem */
+  font-size: 0.95rem; /* Define o tamanho da fonte */
+  color: #6f7772; /* Define a cor do texto */
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 24px 24px 40px; /* Define o preenchimento */
+  }
+
+  .hero {
+    flex-direction: column; /* Define a direção do flex */
+    text-align: center; /* Define o alinhamento do texto */
+    padding-top: 12px; /* Define o preenchimento no topo */
+  }
+
+  .hero-copy,
+  .hero-highlights {
+    max-width: 100%; /* Define a largura máxima */
+  }
+
+  .hero-highlights ul {
+    align-items: center; /* Define o alinhamento dos itens */
+  }
+
+  .hero-highlights li {
+    width: min(100%, 320px); /* Define a largura do elemento */
+    justify-content: center; /* Define o alinhamento do conteúdo */
+  }
+
+  .feature-item,
+  .feature-item.reverse {
+    flex-direction: column; /* Define a direção do flex */
+    text-align: center; /* Define o alinhamento do texto */
+  }
+}
